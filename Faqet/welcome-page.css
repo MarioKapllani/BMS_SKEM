@@ -7,7 +7,7 @@
 }
 #page
 {
-    background-image: url(file:///C:/Users/mario/Documents/GitHub/BMS_SKEM/Faqet/Media/main-background-6.jpg);
+    background-image: url(/Media/main-background-6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -158,17 +158,17 @@
 
 i.manager-logo
 {
- background-image: url(file:///C:/Users/mario/Documents/GitHub/BMS_SKEM/Faqet/Media/Manager-icon.png);   
+ background-image: url(/Media/Manager-icon.png);   
 }
 
 i.kamarier-logo
 {
- background-image: url(file:///C:/Users/mario/Documents/GitHub/BMS_SKEM/Faqet/Media/kamarier-icon.png);   
+ background-image: url(/Media/kamarier-icon.png);   
 }
 
 i.ekonomist-logo
 {
- background-image: url(file:///C:/Users/mario/Documents/GitHub/BMS_SKEM/Faqet/Media/ekonomist-icon.png);   
+ background-image: url(/Media/ekonomist-icon.png);   
 }
 
 

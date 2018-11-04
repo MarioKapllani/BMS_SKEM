@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bar Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Mario Kapllani">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+   function myFunction() {
+    var x = document.getElementById("log-in");
+       var y= document.getElementById("rw-3")
+   
+        x.removeAttribute("style");
+   
+        y.style.display = "none";
+    
+}
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div class="container h-100">
+            <div class="main-title text-center"> <img class="site-logo" src="Media/BMS-LOGO.png"></div>
+            <div id="log-in"class="row align-middle justify-content-center align-items-center" style="display:none;">
+                <div class="col-md-16 col-lg-4">
+                    <div class="card gr-2 gr-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div id="rw-3" class="row align-middle">
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-1 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>
+                                MANAGER</h1>
+                            <p>Përgjegjës për kontrollin ose administrimin e një biznesi ose grupi punonjësish</p>
+                        </div>
+                     <!--   <a href="">Kliko Këtu</a> -->
+                     <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="manager-logo"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-2 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>
+                                KAMARIER</h1>
+                            <p>Puna e kamarierit është t'i shërbejë klientëve në tryezat e tyre në një restorant</p>
+                        </div>
+                        <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="kamarier-logo"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-3 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>EKONOMIST</h1>
+                            <p>Ekonomisti studion ose ka një njohuri të veçantë të ekonomisë</p>
+                        </div>
+                        <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="ekonomist-logo"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

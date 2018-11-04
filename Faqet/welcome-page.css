@@ -24,6 +24,11 @@
   background: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
 }
 
+/* .gr-6
+{
+    background: linear-gradient(170deg, #232f34 0%, #344955 100%);
+} */
+
 * {
   transition: .5s;
 }
@@ -76,11 +81,6 @@
   width: 10%;
 }
 
-.gr-6
-{
-    background: linear-gradient(170deg, #232f34 0%, #344955 100%);
-    color: 
-}
 .card {
   min-height: 170px;
   margin: 0;

@@ -14,8 +14,8 @@
       
       $(document).ready(function(){
     $(".kliko").click(function(){
-        $("#rw-3").fadeOut(750);
-        $("#log-in").delay(1750).fadeIn(1750);
+        $("#rw-3").delay(350).fadeOut("slow");
+        $("#log-in").delay(1000).fadeIn("slow");
      
     });
 });
@@ -28,7 +28,7 @@
             <div class="main-title text-center"> <img class="site-logo" src="Media/BMS-LOGO.png"></div>
            
             <div id="rw-3" class="row align-middle">
-                <div class="col-md-16 col-lg-4 column">
+                <div class="col-md-16 col-lg-4 column"  data-transition="pop">
                     <div class="card gr-1 gr-6">
                         <div class="txt">
                             <h1>LOG IN </br>

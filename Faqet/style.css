@@ -5,12 +5,22 @@ a.kliko:hover
 {
     cursor: pointer;
 }
+
+button.btn.btn-primary.close
+{
+    margin-left: 44%;
+    margin-right: 44%;
+    margin-top: 30px;
+    border-radius: 50%;
+    background-color: #B00020;
+    padding:10px;
+}
 .container {
     max-width: 100%!important;
 }
 #page {
 	color: #fff;
-	background: linear-gradient(-45deg, #018786, #03DAC6, #3700B3, #6200EE);
+	background: linear-gradient(-45deg, #03A9F4, #00ACC1,#00838F, #01579B);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;

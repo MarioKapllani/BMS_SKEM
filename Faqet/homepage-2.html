@@ -22,6 +22,16 @@
         $("#log-in").delay(1350).fadeIn("slow");
      
     });
+          
+           $(".close").click(function(){
+       /* $("#rw-3").delay(350).fadeOut("slow"); */
+        $("#log-in").animate({
+            left: '50px',
+            opacity: '0',
+        }).fadeOut();
+        $("#rw-3").delay(1350).fadeIn("slow");
+     
+    });
 });
     </script>
 </head>
@@ -75,7 +85,7 @@
                 </div>
 
             </div>
-    
+            
             <div id="log-in"class="row align-middle justify-content-center align-items-center" style="display:none;">
                 <div class="col-md-16 col-lg-4">
                     <div class="card gr-4 gr-6">
@@ -90,7 +100,9 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Log In</button>
                         </form>
+                      
                     </div>
+                      <button type="button" class="btn btn-primary close">X</button>
                 </div>
 
             </div>

@@ -14,8 +14,12 @@
       
       $(document).ready(function(){
     $(".kliko").click(function(){
-        $("#rw-3").delay(350).fadeOut("slow");
-        $("#log-in").delay(1000).fadeIn("slow");
+       /* $("#rw-3").delay(350).fadeOut("slow"); */
+        $("#rw-3").animate({
+            left: '50px',
+            opacity: '0',
+        }).fadeOut();
+        $("#log-in").delay(1350).fadeIn("slow");
      
     });
 });

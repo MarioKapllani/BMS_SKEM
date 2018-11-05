@@ -11,15 +11,14 @@
     <link rel='stylesheet' href='style.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-   function myFunction() {
-    var x = document.getElementById("log-in");
-       var y= document.getElementById("rw-3")
-   
-        x.removeAttribute("style");
-   
-        y.style.display = "none";
-    
-}
+      
+      $(document).ready(function(){
+    $(".kliko").click(function(){
+        $("#rw-3").fadeOut(750);
+        $("#log-in").delay(1750).fadeIn(1750);
+     
+    });
+});
     </script>
 </head>
 
@@ -27,6 +26,52 @@
     <div id="page">
         <div class="container h-100">
             <div class="main-title text-center"> <img class="site-logo" src="Media/BMS-LOGO.png"></div>
+           
+            <div id="rw-3" class="row align-middle">
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-1 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>
+                                MANAGER</h1>
+                            <p>Përgjegjës për kontrollin ose administrimin e një biznesi ose grupi punonjësish</p>
+                        </div>
+                     <!--   <a href="">Kliko Këtu</a> -->
+                     <a  class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="manager-logo"></i>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-2 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>
+                                KAMARIER</h1>
+                            <p>Puna e kamarierit është t'i shërbejë klientëve në tryezat e tyre në një restorant</p>
+                        </div>
+                        <a class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="kamarier-logo"></i>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-16 col-lg-4 column">
+                    <div class="card gr-3 gr-6">
+                        <div class="txt">
+                            <h1>LOG IN </br>EKONOMIST</h1>
+                            <p>Ekonomisti studion ose ka një njohuri të veçantë të ekonomisë</p>
+                        </div>
+                        <a class="kliko" >Kliko Këtu</a>
+                        <div class="ico-card">
+                            <i class="ekonomist-logo"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
             <div id="log-in"class="row align-middle justify-content-center align-items-center" style="display:none;">
                 <div class="col-md-16 col-lg-4">
                     <div class="card gr-2 gr-6">
@@ -41,48 +86,6 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Log In</button>
                         </form>
-                    </div>
-                </div>
-
-            </div>
-            <div id="rw-3" class="row align-middle">
-                <div class="col-md-16 col-lg-4 column">
-                    <div class="card gr-1 gr-6">
-                        <div class="txt">
-                            <h1>LOG IN </br>
-                                MANAGER</h1>
-                            <p>Përgjegjës për kontrollin ose administrimin e një biznesi ose grupi punonjësish</p>
-                        </div>
-                     <!--   <a href="">Kliko Këtu</a> -->
-                     <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
-                        <div class="ico-card">
-                            <i class="manager-logo"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-16 col-lg-4 column">
-                    <div class="card gr-2 gr-6">
-                        <div class="txt">
-                            <h1>LOG IN </br>
-                                KAMARIER</h1>
-                            <p>Puna e kamarierit është t'i shërbejë klientëve në tryezat e tyre në një restorant</p>
-                        </div>
-                        <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
-                        <div class="ico-card">
-                            <i class="kamarier-logo"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-16 col-lg-4 column">
-                    <div class="card gr-3 gr-6">
-                        <div class="txt">
-                            <h1>LOG IN </br>EKONOMIST</h1>
-                            <p>Ekonomisti studion ose ka një njohuri të veçantë të ekonomisë</p>
-                        </div>
-                        <a onclick="myFunction()" class="kliko" >Kliko Këtu</a>
-                        <div class="ico-card">
-                            <i class="ekonomist-logo"></i>
-                        </div>
                     </div>
                 </div>
 

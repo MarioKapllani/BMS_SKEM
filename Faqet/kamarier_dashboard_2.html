@@ -11,10 +11,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="fature_js.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='style.css'>
     <link rel='stylesheet' href='km_d.css'>
+    <link rel='stylesheet' href='fature_style.css'>
+
+    <link type="text/css" media="print" />
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css'>
+   
 
     <script>
+
+        function print_fature(){
+            var prtContent = document.getElementById("myFature");
+            var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+        }
+        
         $(".tv-1").click(function(){
      var km_class = this.className;
             alert(km_class);
@@ -87,30 +109,52 @@ $('.' + classes.join(',.')).click(function(){
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="myFature" role="dialog">
+            <div class="modal fade print" id="myFature" role="dialog">
                 <div class="modal-dialog">
 
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Tavolina NR.</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-header">
                             <h4>Produkti</h4>
                             <h4>Sasia</h4>
+                            <h4>Çmimi</h4>
                         </div>
-                        <div class="modal-body">
-                            <p class="produkt numri">Some text in the modal.</p>
-                            <h4 class="sasia">0</h4>
-                            <button type="button" class="btn btn-default hiq" data-dismiss="modal">-</button>
-                            <button type="button" class="btn btn-default shto" data-dismiss="modal">+</button>
-                            <button type="button" class="btn btn-default fshi" data-dismiss="modal">X</button>
+                        <!-- Search input -->
+                        <form class="w3-container">
+                            <p><input class="w3-input w3-hover-border-red" type="text" id="myInput" onkeyup="myFunction()" placeholder="search">
+                                <p>
+                        </form>
+
+                        <!--<div class="w3-container">
+  <div id="myBar" class="w3-margin-top w3-teal" onclick="move()"></div>
+  </div>
+  -->
+                        <!-- List items -->
+                        <div class="w3-container">
+                            <ul id="myUL" class="w3-margin-top w3-margin-bottom">
+                                <li>Coca-Cola</li>
+                                <li>Fanta</li>
+                                <li>Kafe</li>
+                            </ul>
+                            <button class="w3-button w3-right w3-xlarge w3-green w3-card-4 w3-margin-bottom newItem" onclick="document.getElementById('id01').style.display='block'">+</button>
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content">
+                                    <div class="w3-container">
+                                        <span onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-display-topright" onmousedown="buttonClose();">&times;</span>
+                                        <!-- Red button -->
+                                        <h3>Plotëso të dhënat e Produktit</h3>
+                                        <!-- Modal -->
+                                        <input class="w3-input half w3-border" name="message" type="text" id="productName" placeholder="Emër Produkti">
+                                        <input class="w3-input half w3-border" name="message" type="number" id="productQuantity" placeholder="Sasia">
+                                        <button class="w3-btn w3-block w3-black w3-margin-top w3-margin-bottom addBtn" onclick="newElement();buttonClose();" id="myBtn">Shto</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save changes</button>
-                            <button type="button" class="btn btn-secondary">Print</button>
+                            <button type="button" class="btn btn-secondary glyphicon glyphicon-print" onclick="print_fature();">Print</button>
                         </div>
                     </div>
 
@@ -121,5 +165,7 @@ $('.' + classes.join(',.')).click(function(){
 
 
 </body>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+    <script src="js/index.js"></script>
 
 </html>

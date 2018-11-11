@@ -12,3 +12,14 @@ img.tavoline:hover
 {
     height: 200px;
 }
+
+.zone
+{
+    text-align: center;
+}
+
+.modal-dialog h1, .modal-dialog h2, .modal-dialog h3, .modal-dialog h4, .modal-dialog h5, .modal-dialog h6, .modal-dialog p
+{
+    color: black;
+}
+

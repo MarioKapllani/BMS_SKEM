@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+
+Future updates: 
+
+Store list data 
+https://www.w3schools.com/HTML/html5_webstorage.asp
+
+Add toast notifications with if else on button
+https://www.w3schools.com/howto/howto_js_snackbar.asp
+
+Add a skill bar for percentage complete (below search), add an animation at the end
+https://www.w3schools.com/howto/howto_css_skill_bar.asp
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fatur_style.css">
+    <script>
+    
+
+// Open sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+// Close sidebar
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// List
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  };
+}
+// Add a "checked" symbol when clicking on a list item
+var tick = document.querySelector("#myUL");
+tick.addEventListener(
+  "click",
+  function(ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("checked");
+    }
+  },
+  false
+);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("inputValue").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+  document.getElementById("myInput").value = "";
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+}
+
+// Hide modal when 'Go' button pressed
+function buttonClose() {
+  document.getElementById("id01").style.display = "none";
+}
+
+// Press enter to save note
+var input = document.getElementById("id01");
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById("myBtn").click();
+    document.getElementById("inputValue").value = "";
+  }
+});
+
+// Search filter
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+// Click to hide panel
+function hidePanel() {
+  var x = document.getElementById("yellowPanel");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// Drag and drop list items
+dragula([document.getElementById("myUL")]);
+
+dragula([document.getElementById("myUL")], {
+  removeOnSpill: true
+});
+    </script>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <header class="w3-container w3-teal">
+    <h1>Super Notes</h1>
+    <p>A scalable note taking app. Add, drag / drop and search.</p>
+  </header>
+  <!-- Search input -->
+  <form class="w3-container">
+    <p><input class="w3-input w3-hover-border-pink" type="text" id="myInput" onkeyup="myFunction()" placeholder="search">
+      <p>
+  </form>
+
+  <!--
+  <div class="w3-container">
+    <div id="myBar" class="w3-margin-top w3-teal" onclick="move()"></div>
+  </div>
+  -->
+  <!-- List items -->
+  <div class="w3-container">
+    <ul id="myUL" class="w3-margin-top w3-margin-bottom">
+      <li class="checked">Add search filter</li>
+      <li class="checked">Change margin on yellow panel</li>
+      <li class="checked">Fix alert bug</li>
+      <li class="checked">Click to hide yellow panel</li>
+      <li class="checked">Add enter to save note</li>
+      <li class="checked">Make list items draggable</li>
+      <li>Add an about page in the sidebar</li>
+      <li>Inspect close class for span</li>
+      <li>Log actions to console via <b>callback</b></li>
+      <li>Note formatting options</li>
+      <li>Open sidebar fullscreen for mobile</li>
+      <li>Show list item count in a div</li>
+    </ul>
+    <button class="w3-button w3-right w3-xlarge w3-pink w3-card-4 w3-margin-bottom newItem" onclick="document.getElementById('id01').style.display='block'">+</button>
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" onkeypress="buttonClose()">&times;</span>
+          <!-- Pink button -->
+          <h3>Add Task</h3>
+          <!-- Modal -->
+          <input class="w3-input w3-border" name="message" type="text" id="inputValue" placeholder="Message">
+          <button class="w3-btn w3-block w3-black w3-margin-top w3-margin-bottom addBtn" onclick="newElement();buttonClose();" id="myBtn">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-container w3-teal">
+    <p>Made by <a href="https://codepen.io/DomDevelops/" class="w3-pink"><b>DomDevelops</b></a>, with thanks to W3Schools for the framework.</p>
+  </div>
+</body>
+
+</html>

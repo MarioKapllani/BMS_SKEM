@@ -35,26 +35,6 @@
             WinPrint.close();
         }
         
-        $(".tv-1").click(function(){
-     var km_class = this.className;
-            alert(km_class);
-     $(".modal-title").text(km_class);
-});
-        
-        var classes = ['tavoline','two','three'];
-
-$('.' + classes.join(',.')).click(function(){
-    var classNames = this.className.split(/\s+/);
-    var cls;
-    $.each(classNames, function(i, c) {
-        if( $.inArray(c, classes) !== -1 ) {
-            cls = c;
-            return false;
-        }
-    });
-    alert(cls);
-});
-        
         $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -77,7 +57,10 @@ $('.' + classes.join(',.')).click(function(){
                     <div class="txt zone">
                         <h1>Zona 1</h1>
                     </div>
+                    <div class="tv-1">
                     <img class="tavoline tv-1" data-toggle="modal" data-target="#myFature" src="Media/table_green.png">
+                    <div class="centered">Centered</div>
+                    </div>
                     <img class="tavoline tv-2" src="Media/table_red.png">
                     <img class="tavoline tv-3" src="Media/table_green.png">
                     <img class="tavoline tv-4" src="Media/table_red.png">
@@ -163,7 +146,7 @@ $('.' + classes.join(',.')).click(function(){
 
 
 </body>
- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
-    <script src="js/index.js"></script>
+ <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script> --->
+ <script src="js/index.js"></script>
 
 </html>

@@ -1,0 +1,14 @@
+img.tavoline
+{
+    width: 125px;
+}
+
+img.tavoline:hover
+{
+    cursor: pointer;
+}
+
+.col-md-16
+{
+    height: 200px;
+}

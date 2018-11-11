@@ -37,6 +37,7 @@ ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
+    height: 44px;
   background: #eee;
   font-size: 18px;
   transition: 0.2s;

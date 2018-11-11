@@ -21,7 +21,7 @@
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css'>
-   
+
 
     <script>
 
@@ -33,6 +33,15 @@
             WinPrint.focus();
             WinPrint.print();
             WinPrint.close();
+        }
+        
+        function ndryshostatus()
+        {
+            
+            document.getElementById('tv-1').src='Media/table_red.png';
+            document.getElementById('tv-1').title='E Zene';
+        
+            
         }
         
         $('#exampleModal').on('show.bs.modal', function (event) {
@@ -57,10 +66,8 @@
                     <div class="txt zone">
                         <h1>Zona 1</h1>
                     </div>
-                    <div class="tv-1">
-                    <img class="tavoline tv-1" data-toggle="modal" data-target="#myFature" src="Media/table_green.png">
-                    <div class="centered">Centered</div>
-                    </div>
+                    <img id="tv-1" class="tavoline tv-1" src="Media/table_green.png" data-toggle="modal" data-target="#myFature" title="E Lirë" >
+                    <button class="tavoline tv-1" onclick="ndryshostatus()">Ndrysho statusin e tavolines</button>                    
                     <img class="tavoline tv-2" src="Media/table_red.png">
                     <img class="tavoline tv-3" src="Media/table_green.png">
                     <img class="tavoline tv-4" src="Media/table_red.png">
@@ -98,7 +105,7 @@
                         <div class="modal-header">
                             <h4>Produkti</h4>
                             <h4>Sasia</h4>
-                            <h4>Çmimi</h4>
+                            <h4>Çmimi (Lekë)</h4>
                         </div>
                         <!-- Search input -->
                         <form class="w3-container">
@@ -146,7 +153,7 @@
 
 
 </body>
- <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script> --->
- <script src="js/index.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script> --->
+<script src="js/index.js"></script>
 
 </html>

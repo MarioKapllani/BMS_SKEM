@@ -11,30 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' href='style.css'>
-    <link rel='stylesheet' href='km_d.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/km_d.css'>
 
     <script>
-        $(".tv-1").click(function(){
-     var km_class = this.className;
-            alert(km_class);
-     $(".modal-title").text(km_class);
-});
-        
-        var classes = ['tavoline','two','three'];
-
-$('.' + classes.join(',.')).click(function(){
-    var classNames = this.className.split(/\s+/);
-    var cls;
-    $.each(classNames, function(i, c) {
-        if( $.inArray(c, classes) !== -1 ) {
-            cls = c;
-            return false;
-        }
-    });
-    alert(cls);
-});
-        
+            
         $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes

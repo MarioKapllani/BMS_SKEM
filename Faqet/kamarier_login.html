@@ -9,7 +9,17 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='css/style.css'>
-
+    <script>
+        function log_in()
+    {
+        var a= document.getElementById("exampleInputEmail1").nodeValue;
+        var b= document.getElementById("elementInputPassword1").nodeValue;
+        
+        
+        
+            alert("Error");
+    };
+    </script>
 </head>
 
 <body>
@@ -19,7 +29,7 @@
             <div class="row align-middle justify-content-center align-items-center">
                 <div class="col-md-16 col-lg-4">
                     <div class="card gr-2 gr-6">
-                        <form>
+                        <form action="#" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Username</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
@@ -28,7 +38,7 @@
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                             </div>
-                            <button type="submit" class="btn btn-primary">Log In</button>
+                            <button type="submit" class="btn btn-primary" onclick="log_in()">Log In</button>
                         </form>
                     </div>
                 </div>

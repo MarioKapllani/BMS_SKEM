@@ -120,9 +120,9 @@
                         <!-- List items -->
                         <div class="w3-container">
                             <ul id="myUL" class="w3-margin-top w3-margin-bottom">
-                                <li>Coca-Cola</li>
-                                <li>Fanta</li>
-                                <li>Kafe</li>
+                                <li><p class="the_emri">Coca-Cola</p><input type="number" class="the_sasia" value="2"><input type="number" readonly="false" class="the_total" value="300"> </li>
+                                <li><p class="the_emri">Fanta</p><input type="number" class="the_sasia" value="4"><input type="number" readonly="false" class="the_total" value="600"></li>
+                                <li><p class="the_emri">Kafe</p><input type="number" class="the_sasia" value="5"><input type="number" readonly="false" class="the_total" value="450"></li>
                             </ul>
                             <button class="w3-button w3-right w3-xlarge w3-green w3-card-4 w3-margin-bottom newItem" onclick="document.getElementById('id01').style.display='block'">+</button>
                             <div id="id01" class="w3-modal">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
                             <button type="button" class="btn btn-secondary glyphicon glyphicon-print" onclick="print_fature();">Print</button>
                         </div>
                     </div>

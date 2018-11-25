@@ -1,2 +1,12 @@
-body {visibility:hidden;}
+@media print
+    {
+        body, .close, .w3-input, .btn, .w3-button {visibility:hidden;}
 .print {visibility:visible;}
+.print{
+    position:absolute;
+    left:0;
+    top:0;
+  }
+        
+
+}
